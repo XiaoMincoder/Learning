@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main()
-{            //有序数组元素下标的查找
+{          //有序数组元素下标的查找
     int n=0;
     int arr[] = { 1,2,3,4,6,7,8,9 };
     int sz = sizeof(arr) / sizeof(arr[0]);
