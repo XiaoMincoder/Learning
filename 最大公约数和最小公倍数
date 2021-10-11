@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    long long m,n,r=0;
+    long long i=0,j;
+    while(scanf("%lld%lld", &m,&n)!=EOF)
+    {
+        j = m * n;
+        while (m % n)
+        {
+
+            r = m % n;
+            m = n;
+            n = r;
+
+        }
+        printf("%lld ", n);
+
+        i = j / n;
+        printf("%lld\n", i);
+    }
+    return 0;
+}
