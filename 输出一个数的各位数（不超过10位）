@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<math.h>
+int main()//初始版，待优化
+{
+    int i,a=0,num=0,j,k,l,m,n,b=0;
+    scanf("%d", &a);
+    i = a;
+    k = a;
+    m = a;
+    if (a == 0)
+    {
+        printf("1\n0\n0");
+        goto again;
+    }
+    while (i!=0)
+    {   
+        i = i / 10;
+        num++;
+    }
+    printf("%d\n", num);
+    num = num - 1;
+    l = num;
+    j = k;
+    while (1)
+    {
+        j = k;
+        j = (int)(a / (pow(10, num))) % 10;
+        printf("%d ",j);
+        num--;
+        if (num < 0)
+        {
+            printf("\n");
+            break;
+        }
+    }
+    while (1)
+    {
+        n = m;
+        n = (int)(a / (pow(10, b))) % 10;
+        b++;
+        printf("%d", n);
+        if (b > l)break;
+    }
+    again:
+    system("pause");
+    return 0;
+}
