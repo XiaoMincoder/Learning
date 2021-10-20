@@ -1,0 +1,22 @@
+#include<stdio.h>//用户输入四则运算表达式并输出结果
+int main()
+{
+	char symbol;
+	double a, b;
+	scanf("%lf%c%lf", &a, &symbol, &b);
+	if (b == 0 && symbol == '/')
+	{
+		printf("除零错误!");
+		goto there;
+	}
+	switch (symbol)
+	{
+		case '+': printf("%.2lf+%.2lf=%.2lf",a,b, a + b); break;
+		case '-': printf("%.2lf-%.2lf=%.2lf", a, b, a - b); break;
+		case '*': printf("%.2lf*%.2lf=%.2lf", a, b, a * b); break;
+		case '/': printf("%.2lf/%.2lf=%.2lf", a, b, a / b); break;
+		default:printf("非法运算符!");
+	}
+	there:
+	return 0;
+}
